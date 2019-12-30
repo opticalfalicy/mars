@@ -4,6 +4,8 @@ body{
   background: black;
 }
 
+/* @media screen and  */
+
 .App{
   width: 100%;
   height: 100vh;
@@ -15,18 +17,66 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
   color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.title-div{
+  text-align: center;
+  color: black;
+}
+
+.title{
+  font-size: 8rem;
+}
+
+.subtitle{
+  font-size: 4rem;
 }
 
 .data{
   display: flex;
   justify-content: center;
-  height: 35vh;
+  height: 20vh;
+  width: 100%;
 }
 
 .data-list{
-  width: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.data-list h3 {
+  border: 1px solid white;
+  background: rgba(181, 163, 123, 0.295);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 1%;
+  width: 15%;
+}
+
+.data-title{
+  font-size: 2rem;
+
+}
+
+.data-item{
+  font-size: 1.5rem;
+}
+
+footer{
   display: flex;
   justify-content: space-evenly;
+  width: 60%;
+}
+
+footer a{
+  color: white
 }
 

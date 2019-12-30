@@ -52,6 +52,10 @@ export default class App extends React.Component {
     return Math.round(mph * 100) / 100;
   }
 
+  seasonConv(seas){
+    return seas.toUpperCase();
+  }
+
   utcConv(ut){
     // let localUT = new Date(ut);
     // let lUT = localUT.toISOString();
@@ -62,7 +66,7 @@ export default class App extends React.Component {
     console.log(dTarr)
     let date = dTarr.shift();
     let time = dTarr.pop();
-    let suffix = time 
+    let suffix = time;
     time = time.replace(/.000z/gi, " ");
     return date + " " + time;
   }
@@ -73,17 +77,26 @@ export default class App extends React.Component {
   if(this.state.sol !== null){
   return (
     <div className="App">
-      <h1>Mars: Sol {this.state.currSol}</h1>
+
+      <div className="title-div">
+        <h1 className="title">Mars</h1>
+        <h2 className="subtitle">Sol {this.state.currSol}</h2>
+      </div>
 
       <div className="data">
-        <ul className='data-list'>
-          <li className='data-item at' sol={this.sol}>Temperature: {this.tempConv(this.state.temp)}℉</li>
-          <li className='data-item hws' sol={this.sol}>Wind Speed: {this.winConv(this.state.wind)} mph</li>
-          <li className='data-item pre' sol={this.sol}>Atmospheric Pressure: {this.pressConv(this.state.pressure)} Pa</li>
-          <li className='data-item season' sol={this.sol}>Season: {this.state.season}</li>
-          <li className='data-item last-utc' sol={this.sol}>Time of Last Recorded Data: {this.utcConv(this.state.utc)}</li>
-        </ul>
+        <div className='data-list'>
+          <h3 className='data-title last-utc' sol={this.sol}> Time of Most Recent Data <p className="data-item">{this.utcConv(this.state.utc)}</p></h3>
+          <h3 className='data-title season' sol={this.sol}> Season <p className="data-item">{this.seasonConv(this.state.season)}</p></h3>
+          <h3 className='data-title at' sol={this.sol}> Temperature <p className="data-item">{this.tempConv(this.state.temp)}℉</p></h3>
+          <h3 className='data-title hws' sol={this.sol}> Wind Speed  <p className="data-item">{this.winConv(this.state.wind)} mph</p></h3>
+          <h3 className='data-title pre' sol={this.sol}> Atmospheric Pressure <p className="data-item">{this.pressConv(this.state.pressure)} Pa</p></h3>
+        </div>
       </div>
+
+      <footer>
+        <item>Original Data By <a href="https://mars.nasa.gov/insight/weather/">NASA</a></item>
+        <item>Webpage Created By <a href="http://www.opticalfalicy.com/">opticalfalicy</a></item>
+      </footer>
     </div>
   );
 }
