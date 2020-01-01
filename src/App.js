@@ -77,6 +77,12 @@ export default class App extends React.Component {
   if(this.state.sol !== null){
   return (
     <div className="App">
+{/*  */}
+      <div className='bg-div'>
+        {/* <img className='bg' src={require("../src/OSIRIS_Mars_true_color.jpg")} /> */}
+        <img className='bg'/>
+      </div>
+
 
       <div className="title-div">
         <h1 className="title">Mars</h1>
