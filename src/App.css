@@ -16,7 +16,7 @@ body{
   opacity: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   align-content: space-around;
   color: white;
@@ -48,10 +48,12 @@ body{
 .title-div{
   text-align: center;
   color: black;
+  /* height: 50vh; */
 }
 
 .title{
   font-size: 8rem;
+  /* font-weight: 550; */
 }
 
 .subtitle{
@@ -61,8 +63,8 @@ body{
 .data{
   display: flex;
   justify-content: center;
-  height: 15vh;
-  width: 100%;
+  height: 35vh;
+  /* width: 100%; */
 }
 
 .data-list{
@@ -70,6 +72,7 @@ body{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  height: 45vh;
 }
 
 .data-list h3 {
@@ -82,7 +85,7 @@ body{
   text-align: center;
   padding: 1%;
   width: 80%;
-  height: 40%;
+  /* height: 40%; */
 
 }
 
@@ -101,7 +104,7 @@ footer{
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
-  height: 25vh;
+  /* height: 25vh; */
 }
 
 footer a{
