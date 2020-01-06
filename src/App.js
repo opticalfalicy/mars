@@ -113,7 +113,7 @@ export default class App extends React.Component {
 
       <div className="title-div">
         <h1 className="title">Mars</h1>
-        <h2 className="subtitle">Sol {this.state.currSol}</h2>
+        <h2 className="subtitle">SOL {this.state.currSol}</h2>
       </div>
 
       <div className="data">
