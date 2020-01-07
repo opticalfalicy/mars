@@ -21,7 +21,7 @@ export default class App extends React.Component {
   
 
   async componentDidMount(){
-    const url = "api.nasa.gov/insight_weather/?api_key=lb96rqTKlAn28jteWtjnR5SP04xTcmawNMzV5Djc&feedtype=json&ver=1.0"
+    const url = "a/pi.nasa.gov/insight_weather/?api_key=lb96rqTKlAn28jteWtjnR5SP04xTcmawNMzV5Djc&feedtype=json&ver=1.0"
     const response = await fetch(url);
     const data = await response.json();
     let solK = data.sol_keys[6];
