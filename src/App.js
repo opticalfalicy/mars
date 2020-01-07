@@ -70,7 +70,7 @@ export default class App extends React.Component {
     if(ms == undefined) return 'Currently Unavailable';
     else{
     let mph = (ms * 3600 / 1610.3*1000)/1000;
-    return Math.round(mph * 100) / 100;
+    return Math.round(mph * 100) / 100 + 'mph';
     }
   }
 
@@ -121,8 +121,8 @@ export default class App extends React.Component {
           <h3 className='data-title last-utc' sol={this.sol}> Time of Most Recent Data <p className="data-item">{this.utcConv(this.state.utc)}</p></h3>
           <h3 className='data-title season' sol={this.sol}> Season <p className="data-item">{this.seasonConv(this.state.season)}</p></h3>
           <h3 className='data-title at' sol={this.sol}> Temperature <p className="data-item">{this.tempConv(this.state.temp)}</p></h3>
-          <h3 className='data-title hws' sol={this.sol}> Wind Speed  <p className="data-item">{this.winConv(this.state.wind)} mph</p></h3>
-          <h3 className='data-title pre' sol={this.sol}> Atmospheric Pressure <p className="data-item">{this.pressConv(this.state.pressure)} Pa</p></h3>
+          <h3 className='data-title hws' sol={this.sol}> Wind Speed  <p className="data-item">{this.winConv(this.state.wind)}</p></h3>
+          <h3 className='data-title pre' sol={this.sol}> Atmospheric Pressure <p className="data-item">{this.pressConv(this.state.pressure)}</p></h3>
         </div>
       </div>
 

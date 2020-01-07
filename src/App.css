@@ -64,7 +64,7 @@ body{
   display: flex;
   justify-content: center;
   height: 35vh;
-  /* width: 100%; */
+  width: 40%;
 }
 
 .data-list{
@@ -197,6 +197,15 @@ footer a{
   .subtitle{
     font-size: 4rem;
   }
+  .data{
+    width: 60%;
+    align-items: center;
+  }
+  .data-list{
+    flex-wrap: nowrap;
+    height: 35vh;
+  }
+
   .data-title{
     font-size: 1.5rem;
   }
