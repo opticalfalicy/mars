@@ -35,31 +35,57 @@ export default class App extends React.Component {
       season: data[solK].Season
 
     })
-    console.log(this.state);
+    // console.log(Object.keys(this.state.sol), 'state');
+    // let solChk = Object.keys(this.state.sol);
+    // let nullify;
+
+    // for(let i = 0; i < solChk.length; i++){
+    //   if(solChk[0] !== 'AT') this.setState({temp: null})
+    //   if(solChk[0] === 'AT') this.setState({temp: this.state.AT.av});
+      
+    // }
+
+    // let sol = this.state.sol
+
+    // for(let i = 0; i < this.state.sol.length)
   }
 
   pressConv(pressure){
-    return Math.round(pressure * 100) / 100;
+    if(pressure == undefined) return 'Currently Unavailable';
+    else {
+      
+      return Math.round(pressure * 100) / 100 + 'Pa'
+  };
   }
 
   tempConv(cel){
-    let far = (cel * 9/5) + 32;
-    return far;
+    if(cel == undefined) return 'Currently Unavailable';
+    else {
+      let far = (cel * 9/5) + 32;
+      return far + '℉';
+    }
   }
 
   winConv(ms){
+    if(ms == undefined) return 'Currently Unavailable';
+    else{
     let mph = (ms * 3600 / 1610.3*1000)/1000;
-    return Math.round(mph * 100) / 100;
+    return Math.round(mph * 100) / 100 + 'mph';
+    }
   }
 
   seasonConv(seas){
-    return seas.toUpperCase();
+    if(seas == null) return 'Currently Unavailable';
+    else return seas.toUpperCase();
   }
 
   utcConv(ut){
     // let localUT = new Date(ut);
     // let lUT = localUT.toISOString();
 
+    if(ut == undefined) return 'Currently Unavailable';
+
+    else{
     var uT = new Date(ut); // Or the date you'd like converted.
     var lT = new Date(uT.getTime() - (uT.getTimezoneOffset() * 60000)).toISOString();
     let dTarr = lT.split('T');    
@@ -69,6 +95,7 @@ export default class App extends React.Component {
     let suffix = time;
     time = time.replace(/.000z/gi, " ");
     return date + " " + time;
+    }
   }
 
   render(){
@@ -77,19 +104,25 @@ export default class App extends React.Component {
   if(this.state.sol !== null){
   return (
     <div className="App">
+{/*  */}
+      <div className='bg-div'>
+        {/* <img className='bg' src={require("../src/OSIRIS_Mars_true_color.jpg")} /> */}
+        <img className='bg'/>
+      </div>
+
 
       <div className="title-div">
         <h1 className="title">Mars</h1>
-        <h2 className="subtitle">Sol {this.state.currSol}</h2>
+        <h2 className="subtitle">SOL {this.state.currSol}</h2>
       </div>
 
       <div className="data">
         <div className='data-list'>
           <h3 className='data-title last-utc' sol={this.sol}> Time of Most Recent Data <p className="data-item">{this.utcConv(this.state.utc)}</p></h3>
           <h3 className='data-title season' sol={this.sol}> Season <p className="data-item">{this.seasonConv(this.state.season)}</p></h3>
-          <h3 className='data-title at' sol={this.sol}> Temperature <p className="data-item">{this.tempConv(this.state.temp)}℉</p></h3>
-          <h3 className='data-title hws' sol={this.sol}> Wind Speed  <p className="data-item">{this.winConv(this.state.wind)} mph</p></h3>
-          <h3 className='data-title pre' sol={this.sol}> Atmospheric Pressure <p className="data-item">{this.pressConv(this.state.pressure)} Pa</p></h3>
+          <h3 className='data-title at' sol={this.sol}> Temperature <p className="data-item">{this.tempConv(this.state.temp)}</p></h3>
+          <h3 className='data-title hws' sol={this.sol}> Wind Speed  <p className="data-item">{this.winConv(this.state.wind)}</p></h3>
+          <h3 className='data-title pre' sol={this.sol}> Atmospheric Pressure <p className="data-item">{this.pressConv(this.state.pressure)}</p></h3>
         </div>
       </div>
 

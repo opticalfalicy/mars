@@ -9,27 +9,51 @@ body{
 .App{
   width: 100%;
   height: 100vh;
-  background-image: url('./OSIRIS_Mars_true_color.jpg');
+  /* background-image: url('./OSIRIS_Mars_true_color.jpg'); */
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-y: 140%;
   opacity: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   align-content: space-around;
   color: white;
   font-family: 'Courier New', Courier, monospace;
 }
 
+.bg-div{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+
+.bg{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background-image: url('./OSIRIS_Mars_true_color.jpg');
+  /* background-size: 50%; */
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position-x: -50vw;
+  background-position-y: -60vh;
+  
+  
+}
+
 .title-div{
   text-align: center;
   color: black;
+  /* height: 50vh; */
 }
 
 .title{
   font-size: 8rem;
+  /* font-weight: 550; */
 }
 
 .subtitle{
@@ -39,44 +63,172 @@ body{
 .data{
   display: flex;
   justify-content: center;
-  height: 20vh;
-  width: 100%;
+  height: 35vh;
+  width: 40%;
 }
 
 .data-list{
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  height: 45vh;
 }
 
 .data-list h3 {
   border: 1px solid white;
-  background: rgba(181, 163, 123, 0.295);
+  background: rgba(181, 163, 123, 0.795);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
   padding: 1%;
-  width: 15%;
+  width: 90%;
+  /* height: 40%; */
+
 }
 
 .data-title{
-  font-size: 2rem;
+  font-size: 1.2rem;
 
 }
 
 .data-item{
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 footer{
   display: flex;
+  align-items: flex-end;
   justify-content: space-evenly;
-  width: 60%;
+  text-align: center;
+  width: 98%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  /* height: 25vh; */
 }
 
 footer a{
   color: white
+}
+
+@media screen and (min-width: 360px){
+  .data{
+    height: 33vh;
+  }
+}
+
+@media screen and (min-width: 410px){
+  .data{
+    height: 29vh;
+  }
+}
+
+
+@media screen and (min-height: 800px) and (min-width: 370px){
+  
+  .bg{
+    background-position-y: -50vh;
+  }
+  
+  .data{
+    height: 40vh;
+  }
+  
+  .data-list{
+    height: 52vh;
+  }
+}
+@media screen and (min-height: 800px) and (min-width: 410px){
+  
+  .bg{
+    /* background-position-y: -50000%; */
+  }
+  
+  .data{
+    height: 40vh;
+  }
+}
+
+@media screen and (min-width: 760px){
+  .bg{
+    background-position-y: -25vh
+  }
+
+  .data{
+    height: 50vh;
+  }
+  
+}
+
+@media screen and (min-width: 760px){
+
+  .title{
+    font-size: 15rem;
+  }
+
+  .subtitle{
+    font-size: 6rem;
+  }
+
+  .data{
+    height: 55vh;
+  }
+
+  .data-title{
+    font-size: 2.5rem;
+  }
+
+  .data-item{
+    font-size: 2.2rem;
+  }
+
+  footer{
+    font-size: 1.5rem;
+  }
+  
+}
+
+@media screen and (min-width: 1000px) {
+  .title{
+    font-size: 13rem;
+  }
+  .subtitle{
+    font-size: 4rem;
+  }
+  .data{
+    width: 60%;
+    align-items: center;
+  }
+  .data-list{
+    flex-wrap: nowrap;
+    height: 35vh;
+  }
+
+  .data-title{
+    font-size: 1.5rem;
+  }
+  .data-item{
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .bg{
+    background-position-y: -35vh;
+  }
+  .title{
+    font-size: 13rem;
+  }
+  .subtitle{
+    font-size: 4rem;
+  }
+  .data-title{
+    font-size: 1.5rem;
+  }
+  .data-item{
+    font-size: 1.6rem;
+  }
 }
 
