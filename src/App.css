@@ -207,14 +207,19 @@ footer a{
 
   .data{
     height: 45vh;
+    width: 90%;
+  }
+
+  .data-list{
+    height: 40vh;
   }
 
   .data-title{
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .data-item{
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
   footer{
