@@ -40,7 +40,7 @@ body{
   background-repeat: no-repeat;
   background-size: 200%;
   background-position-x: -50vw;
-  background-position-y: -60vw;
+  background-position-y: -110vw;
   
   
 }
@@ -119,12 +119,42 @@ footer a{
   }
 }
 
+
 @media screen and (min-width: 410px){
   .data{
     height: 29vh;
   }
 }
 
+@media screen and (min-width: 560px) and (min-height: 300px){
+
+.title{
+  font-size: 5rem;
+}
+.subtitle{
+  font-size: 3rem;
+}
+
+.data{
+  height: 45vh;
+}
+
+  .data-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  }
+
+  .data-title{
+    font-size: .9rem;
+  }
+
+  .data-item{
+    font-size: .8rem;
+  }
+
+}
 
 @media screen and (min-height: 800px) and (min-width: 370px){
   
@@ -193,12 +223,45 @@ footer a{
   
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-height: 360px) and (min-width: 800px){
+
+  .bg{
+    background-position-y: -50vh;
+  }
+  
   .title{
-    font-size: 20rem;
+    font-size: 5rem;
   }
   .subtitle{
+    font-size: 3rem;
+  }
+  
+  .data{
+    height: 45vh;
+  }
+  
+    .data-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    }
+  
+    .data-title{
+      font-size: .9rem;
+    }
+  
+    .data-item{
+      font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+  .title{
     font-size: 9rem;
+  }
+  .subtitle{
+    font-size: 5rem;
   }
   .data{
     width: 95%;
@@ -218,9 +281,13 @@ footer a{
 }
 
 @media screen and (min-height: 800px) and (min-width: 990px) {
+  .title{
+    font-size: 14rem;
+  }
+  
   .subtitle{
     /* font-size: 12rem; */
-    font-size: 5rem;
+    font-size: 6rem;
   }
 }
 
