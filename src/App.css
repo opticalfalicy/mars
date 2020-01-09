@@ -64,7 +64,7 @@ body{
   display: flex;
   justify-content: center;
   height: 35vh;
-  width: 40%;
+  width: 80%;
 }
 
 .data-list{
@@ -147,41 +147,44 @@ footer a{
   }
   
   .data{
-    height: 40vh;
+    height: 30vh;
+  }
+  .data-list{
+    height: 45vh;
   }
 }
 
 @media screen and (min-width: 760px){
+
   .bg{
     background-position-y: -25vh
   }
 
-  .data{
-    height: 50vh;
+  .title-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30vh;
   }
-  
-}
-
-@media screen and (min-width: 760px){
 
   .title{
-    font-size: 15rem;
+    font-size: 12rem;
   }
 
   .subtitle{
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .data{
-    height: 55vh;
+    height: 45vh;
   }
 
   .data-title{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 
   .data-item{
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 
   footer{
@@ -192,13 +195,13 @@ footer a{
 
 @media screen and (min-width: 1000px) {
   .title{
-    font-size: 13rem;
+    font-size: 20rem;
   }
   .subtitle{
-    font-size: 4rem;
+    font-size: 9rem;
   }
   .data{
-    width: 60%;
+    width: 95%;
     align-items: center;
   }
   .data-list{
@@ -207,10 +210,10 @@ footer a{
   }
 
   .data-title{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .data-item{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 
