@@ -40,7 +40,7 @@ body{
   background-repeat: no-repeat;
   background-size: 200%;
   background-position-x: -50vw;
-  background-position-y: -60vh;
+  background-position-y: -60vw;
   
   
 }
@@ -217,6 +217,13 @@ footer a{
   }
 }
 
+@media screen and (min-height: 800px) and (min-width: 990px) {
+  .subtitle{
+    /* font-size: 12rem; */
+    font-size: 5rem;
+  }
+}
+
 @media screen and (min-width: 1500px) {
   .bg{
     background-position-y: -35vh;
@@ -234,4 +241,5 @@ footer a{
     font-size: 1.6rem;
   }
 }
+
 
