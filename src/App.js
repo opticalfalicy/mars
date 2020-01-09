@@ -62,7 +62,7 @@ export default class App extends React.Component {
     if(cel == undefined) return 'Currently Unavailable';
     else {
       let far = (cel * 9/5) + 32;
-      return far + '℉';
+      return Math.round(far * 100) / 100 + '℉';
     }
   }
 
@@ -118,7 +118,7 @@ export default class App extends React.Component {
 
       <div className="data">
         <div className='data-list'>
-          <h3 className='data-title last-utc' sol={this.sol}> Time of Most Recent Data <p className="data-item">{this.utcConv(this.state.utc)}</p></h3>
+          <h3 className='data-title last-utc' sol={this.sol}> Time of Recorded Data <p className="data-item">{this.utcConv(this.state.utc)}</p></h3>
           <h3 className='data-title season' sol={this.sol}> Season <p className="data-item">{this.seasonConv(this.state.season)}</p></h3>
           <h3 className='data-title at' sol={this.sol}> Temperature <p className="data-item">{this.tempConv(this.state.temp)}</p></h3>
           <h3 className='data-title hws' sol={this.sol}> Wind Speed  <p className="data-item">{this.winConv(this.state.wind)}</p></h3>
@@ -127,8 +127,9 @@ export default class App extends React.Component {
       </div>
 
       <footer>
-        <item>Original Data By <a href="https://mars.nasa.gov/insight/weather/">NASA</a></item>
-        <item>Webpage Created By <a href="http://www.opticalfalicy.com/">opticalfalicy</a></item>
+        <item>Data By <a href="https://mars.nasa.gov/insight/weather/">NASA</a></item>
+        <item>Image By <a href="http://www.esa.int/ESA_Multimedia/Images/2007/02/True-colour_image_of_Mars_seen_by_OSIRIS">ESA</a></item>
+        <item>Webpage By <a href="http://www.opticalfalicy.com/">opticalfalicy</a></item>
       </footer>
     </div>
   );
